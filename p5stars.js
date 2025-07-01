@@ -3,19 +3,15 @@ var easyCam;
 
 function setup() {
   const size = 5000;
-
   createCanvas(window.innerWidth-20, window.innerHeight-20, WEBGL);
   setAttributes('antialias', true);
-  
   easycam = createEasyCam({ distance: size });
-  
   setupStars(size);
 }
 
 function draw() {
   background(0);
   drawEarth();
-
   stars.forEach(star => star.display());
 }
 
@@ -31,7 +27,7 @@ function Star(size) {
   this.y = random(-size, size);
   this.z = random(-size, size);
   this.color = color(random(0, 255), random(0, 255), random(0, 255), random(25, 100));
-  
+
   this.display = function() {
     push();
     fill(this.color);
