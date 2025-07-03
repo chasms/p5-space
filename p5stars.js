@@ -1,11 +1,10 @@
 let stars = []
-var easyCam;
 
 function setup() {
   const size = 5000;
   createCanvas(window.innerWidth-20, window.innerHeight-20, WEBGL);
   setAttributes('antialias', true);
-  easycam = createEasyCam({ distance: size });
+  createEasyCam({ distance: size });
   setupStars(size);
 }
 
